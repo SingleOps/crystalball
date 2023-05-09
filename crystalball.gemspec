@@ -30,7 +30,8 @@ Gem::Specification.new do |spec|
   spec.executables   = [File.basename('bin/crystalball')]
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'git'
+  # 1.14.0 introduced a breaking change: https://github.com/ruby-git/ruby-git/issues/662
+  spec.add_dependency 'git', '>= 1.5', '<= 1.13.2'
 
   spec.required_ruby_version = '> 2.3.0'
 
