@@ -26,8 +26,8 @@ Gem::Specification.new do |spec|
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
-  spec.bindir = "exe"
-  spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.bindir        = "bin"
+  spec.executables   = [File.basename('bin/crystalball')]
   spec.require_paths = ["lib"]
 
   # 1.14.0 introduced a breaking change: https://github.com/ruby-git/ruby-git/issues/662
